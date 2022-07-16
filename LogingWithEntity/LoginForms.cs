@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace LogingWithEntity
 {
-    public partial class Form1 : Form
+    public partial class LoginForms : Form
     {
-        public Form1()
+        public bool isLoginSuccess { get; private set; }
+        public LoginForms()
         {
             InitializeComponent();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+            
         }
     }
 }
