@@ -33,8 +33,9 @@ namespace LogingWithEntity
             Close();    
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
+
             //запрос к таблице
             UserVS logineduserVS = context.MyEntitiesTable.FirstOrDefault(user => user.Loogin == tbLogin.Text && user.Password == tbPassword.Text); //функция возвращает первый элемент в таблице, соответствующий условию в скобках
 
