@@ -15,7 +15,7 @@ namespace LogingWithEntity.Model
 
 
         public Context()
-            : base("name=Context")
+            : base("name=Context2")
         {
             Database.SetInitializer(new initializer());
         }
