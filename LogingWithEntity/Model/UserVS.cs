@@ -13,5 +13,8 @@ namespace LogingWithEntity.Model
         public int Id { get; set; }
         public string Loogin { get; set; }
         public string Password { get; set; }
+        public virtual UserDetail Details { get; set; }
+        public virtual Department Department { get; set; }
+        public virtual ICollection<Role> Roles { get; set; } // многие ко многим
     }
 }

@@ -70,8 +70,20 @@
     <Compile Include="LoginForms.Designer.cs">
       <DependentUpon>LoginForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207271808578_InitialCreate.cs" />
+    <Compile Include="Migrations\202207271808578_InitialCreate.designer.cs">
+      <DependentUpon>202207271808578_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207271824039_Connections.cs" />
+    <Compile Include="Migrations\202207271824039_Connections.designer.cs">
+      <DependentUpon>202207271824039_Connections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Context.cs" />
+    <Compile Include="Model\Department.cs" />
     <Compile Include="Model\initializer.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\UserDetail.cs" />
     <Compile Include="Model\UserVS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForms.resx">
       <DependentUpon>LoginForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207271808578_InitialCreate.resx">
+      <DependentUpon>202207271808578_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207271824039_Connections.resx">
+      <DependentUpon>202207271824039_Connections.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

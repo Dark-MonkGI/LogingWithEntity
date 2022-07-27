@@ -27,6 +27,9 @@ namespace LogingWithEntity.Model
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
 
         public virtual DbSet<UserVS> MyEntitiesTable { get; set; }
+        public virtual DbSet<UserDetail> UserDetails { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
     }
 
     //public class MyEntity
@@ -34,4 +37,9 @@ namespace LogingWithEntity.Model
     //    public int Id { get; set; }
     //    public string Name { get; set; }
     //}
+
+    //Миграция:
+    //Enable-Migrations   -включили миграцию ДБ
+    //Add-Migration Connections  - добавили имя Connections
+    //Update-Database - заапдейтили
 }
