@@ -15,6 +15,6 @@ namespace LogingWithEntity.Model
         public string Password { get; set; }
         public virtual UserDetail Details { get; set; }
         public virtual Department Department { get; set; }
-        public virtual ICollection<Role> Roles { get; set; } // многие ко многим
+        public virtual ICollection<Role> Roles { get; set; } = new List<Role>();   // многие ко многим. С инициализацией
     }
 }

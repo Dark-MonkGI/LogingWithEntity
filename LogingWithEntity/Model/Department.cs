@@ -10,6 +10,6 @@ namespace LogingWithEntity.Model
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<UserVS> Users { get; set; } // один депортамент ко многим юзерам
+        public virtual ICollection<UserVS> Users { get; set; } = new List<UserVS>(); // один депортамент ко многим юзерам
     }
 }

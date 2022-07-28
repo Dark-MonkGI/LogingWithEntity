@@ -15,6 +15,7 @@ namespace LogingWithEntity
     {
         public bool isLoginSuccess { get; private set; }
         Context context = new Context(); // предостовляет доступ к самой бд
+        Task task;
 
         public LoginForms()
         {
@@ -22,7 +23,7 @@ namespace LogingWithEntity
             isLoginSuccess = false;
 
             //Делаем асинхронно запрос к БД
-            Task.Run(() =>
+            task = Task.Run(() =>
             {
                 context.MyEntitiesTable.ToList(); //загрузим таблицу
             }); 
@@ -36,6 +37,7 @@ namespace LogingWithEntity
         private async void btnLogin_Click(object sender, EventArgs e)
         {
 
+            task.Wait();
             //запрос к таблице
             UserVS logineduserVS = context.MyEntitiesTable.FirstOrDefault(user => user.Loogin == tbLogin.Text && user.Password == tbPassword.Text); //функция возвращает первый элемент в таблице, соответствующий условию в скобках
 

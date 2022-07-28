@@ -11,6 +11,6 @@ namespace LogingWithEntity.Model
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<UserVS> Users { get; set; } // роли ко многим юзерам, в юзерах аналогично - многие ко многим
+        public virtual ICollection<UserVS> Users { get; set; } = new List<UserVS>();  // роли ко многим юзерам, в юзерах аналогично - многие ко многим
     }
 }
